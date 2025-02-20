@@ -1,0 +1,50 @@
+ <!-- This page serves as a welcome page, 
+ providing both navigation to other sections and an overview of the website's objective -->
+
+ <!DOCTYPE html>
+ <html lang="EN">
+
+     <head>
+         <meta charset="UTF-8"> 
+         <title> Get Started </title>
+     </head>
+
+     <body>
+        <!--Header display page purpose-->
+         <header> 
+             <h3> Get Started with Meadan</h3> 
+             <h4> Welcome to Meadan ... The First Saudi Stadium Management Site! </h4>
+             <p> We are dedicated to providing you with the best stadium services</p>
+             </header>
+
+         <!--Dispaly Question, Type of client?-->
+         <section class="ChooseClientType?"> 
+             <h4> To better assist you, please let us know who you are: </h4> 
+         </section>
+
+         <!--First form:Ministry of Sport Representative form -->
+         <!--I used summary and details elements, to hide the form and only show it when clicking on the summary-->
+         <section class="MSRepresentativeForm">
+            <details>
+                <summary>Ministry of Sport Representative</summary>
+             <form method="get" action="#"> 
+                <p> This form is for Ministry Representatives </p>
+
+                 <label for="name">Enter your Full Name:</label>
+                 <input type="text" id="name" name="name" required autofocus pattern="^[A-Za-z\s]{2,50}$"  title="Please enter a valid full name with letters and spaces only" ><br>
+
+                 <label for="email">Enter your email:</label>
+                 <input type="email" id="email" name="email" required ><br>
+
+                 <input type="radio" id="Confirm" name="confirmation" value="Confirm" required>
+                 <label for="Confirm">Do you confirm that you are a representative from the Ministry of Sport? <br>
+                    *By selecting this option, you confirm that you are a representative from the Ministry of Sport and accept full responsibility for your actions </label><br>
+                
+                 <input type="submit" value="Submit">
+             </form> </details>     
+         </section>
+
+     
+        
+     </body>
+ </html>
