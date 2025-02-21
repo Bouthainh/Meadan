@@ -21,29 +21,65 @@
              <h4> To better assist you, please let us know who you are: </h4> 
          </section>
 
-         <!--First form:Ministry of Sport Representative form -->
+         <!--First form: Ministry of Sport Representative form -->
          <!--I used summary and details elements, to hide the form and only show it when clicking on the summary-->
          <section class="MSRepresentativeForm">
             <details>
                 <summary>Ministry of Sport Representative</summary>
-             <form method="get" action="#"> 
-                <p> This form is for Ministry Representatives </p>
+                <form method="get" action="#"> 
+                    <p> This form is for Ministry Representatives </p>
+                    
+                    <label for="name">Enter your Full Name:</label>
+                    <input type="text" id="rep-name" name="rep-name" required autofocus minlength="7" pattern="^[A-Za-z\s]{7,50}$"
+                     title="Full Name must be at least 7 characters long and contain only letters and spaces"><br>
+                     
+                    <label for="email-rep">Enter your Email:</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
 
-                 <label for="name">Enter your Full Name:</label>
-                 <input type="text" id="name" name="name" required autofocus pattern="^[A-Za-z\s]{2,50}$"  title="Please enter a valid full name with letters and spaces only" ><br>
+                    <input type="checkbox" id="rep-confirmation" name="rep-confirmation" value="rep-confirmation" required>
+                    <label for="confirmation">* By selecting this option, I confirm that I am an <strong>official representative</strong> accept full responsibility for my actions</label><br>
+                    <input type="submit" value="Submit">
 
-                 <label for="email">Enter your email:</label>
-                 <input type="email" id="email" name="email" required ><br>
-
-                 <input type="radio" id="Confirm" name="confirmation" value="Confirm" required>
-                 <label for="Confirm">Do you confirm that you are a representative from the Ministry of Sport? <br>
-                    *By selecting this option, you confirm that you are a representative from the Ministry of Sport and accept full responsibility for your actions </label><br>
-                
-                 <input type="submit" value="Submit">
              </form> </details>     
          </section>
 
-     
+         <!-- Second form: Stadium Administrator -->
+         <!--I used summary and details elements, to hide the form and only show it when clicking on the summary-->
+         <section class="StadiumAdminForm">
+             <details>
+                <summary>Stadium Administrator</summary>
+                <form method="get" action="#">
+                     <p> This form is for Stadium Administrators </p>
+
+                     <label for="admin-name">Enter your Full Name:</label>
+                     <input type="text" id="admin-name" name="admin-name" required minlength="7" pattern="^[A-Za-z\s]{7,50}$"
+                     title="Full Name must be at least 7 characters long and contain only letters and spaces"><br>
+
+                     
+                     <label for="stadium-name">Enter Stadium Name:</label>
+                     <input type="text" id="stadium-name" name="stadium-name" required minlength="5" pattern="^[A-Za-z\s]{5,90}$"
+                     title="Stadium Name must be at least 5 characters long and contain only letters and spaces"><br>
+
+                     <label for="email-admin">Enter your Email:</label>
+                     <input type="email" id="email-admin" name="email-admin" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
+                     
+                     <label for="position">Please Selec Your Position:</label>
+                     <select id="position" name="position" required>
+                        <!-- Manages staff, bookings, and overall stadium operations -->
+                        <option value="manager">Stadium Manager</option>
+                        <!-- Handles maintenance requests, technical and facility management -->
+                        <option value="operations">Operations Director</option>
+                    </select><br>
+                    
+                    <input type="checkbox" id="admin-confirmation" name="admin-confirmation" value="admin-confirmation" required>
+                    <label for="admin-confirmation">* By selecting this option, I confirm that I am an <strong>official administrator</strong> and accept full responsibility for my actions</label><br>
+                    <input type="submit" value="Submit">
+                    
+            </form>
+        </details>
+    </section>
+
+
         
      </body>
  </html>
