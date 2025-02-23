@@ -11,15 +11,21 @@
 
  <body> 
     <h1>Contact Us</h1>
+    <h2>Fill your information so we can reach you</h2>
+
     <form action="/submit" method="POST">
         <div>
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required>
         </div>
+        <br>
+
         <div>
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" required>
         </div>
+        <br>
+
         <div>
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
@@ -28,18 +34,26 @@
                 <option value="female">Female</option>
             </select>
         </div>
+        <br> 
+
         <div>
             <label for="mobile">Mobile:</label>
             <input type="tel" id="mobile" name="mobile" required>
         </div>
+        <br>
+
         <div>
             <label for="dateOfBirth">Date of Birth:</label>
             <input type="date" id="dateOfBirth" name="dateOfBirth" required>
         </div>
+        <br>
+
         <div>
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required>
         </div>
+        <br> 
+
         <div>
             <label for="language">Language of Communication:</label>
             <select id="language" name="language" required>
@@ -47,14 +61,29 @@
                 <option value="arabic">Arabic</option>
                 <option value="english">English</option>
                 <option value="french">French</option>
+                <option value="spanish">Spanish</option>
+                <option value="german">German</option>
+                <option value="chinese">Chinese</option>
+                <option value="japanese">Japanese</option>
+                <option value="russian">Russian</option>
+                <option value="hindi">Hindi</option>
+                <option value="portuguese">Portuguese</option>
+                <option value="italian">Italian</option>
+                <option value="korean">Korean</option>
             </select>
         </div>
-        <div>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <br>
+
+
+        <div style="display: flex; align-items: flex-start;">
+            <label for="message" style="margin-right: 10px;">Message:</label> 
+            <textarea id="message" name="message" rows="5" required style="width: 200px; margin-left: 0;"></textarea> 
         </div>
+        <br>
+
+
         <button type="submit">Submit</button>
     </form>
-    
+
  </body>
  </html>
